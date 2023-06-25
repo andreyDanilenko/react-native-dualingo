@@ -10,6 +10,7 @@ import {
     HomeScreen
 } from '../../views'
 import { StyleSheet, View, Image, TouchableOpacity } from 'react-native';
+import StatsStackNavigation from './StatsStackNavigation';
 
 const Tab = createBottomTabNavigator();
 
@@ -88,7 +89,7 @@ const TabNavigation = () => {
                 <Tab.Screen name="Plan" component={PlanScreen} />
                 <Tab.Screen name="Rank" component={RankScreen} />
                 <Tab.Screen name="Profile" component={ProfileScreen} />
-                <Tab.Screen name="Stats" component={StatsScreen} />
+                <Tab.Screen name="Stats" component={StatsStackNavigation} options={{ headerShown: false }}/>
                 <Tab.Screen name="Newsletter" component={NewsletterScreen} />
             </Tab.Navigator>
         </NavigationContainer>
@@ -109,8 +110,8 @@ const styles = StyleSheet.create({
     navigator: {
         justifyContent: 'space-between',
         padding: 10,
-        paddingBottom: 20,
-        paddingTop: 20,
+        paddingBottom: 15,
+        paddingTop: 15,
         borderTopWidth: 2,
         borderTopColor: 'lightgrey',
     },

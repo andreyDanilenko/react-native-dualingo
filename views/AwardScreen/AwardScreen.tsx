@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 
-const StatsScreen = ({navigation}: any) => {
+const RankScreen = ({ navigation }: any) => {
     return (
         <View style={styles.container}>
             <View style={styles.navList}>
@@ -9,21 +9,20 @@ const StatsScreen = ({navigation}: any) => {
                     style={styles.navItem}
                     onPress={() => navigation.navigate('Stats')}
                 >
-                    <Text style={{textAlign: 'center'}}> Stats </Text>
+                    <Text style={{ textAlign: 'center' }}> Stats </Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.navItem}
                     onPress={() => navigation.navigate('Award')}
                 >
-                    <Text style={{textAlign: 'center'}}> Award</Text>
+                    <Text style={{ textAlign: 'center' }}> Award</Text>
                 </TouchableOpacity>
             </View>
             <View style={styles.main}>
                 <Text style={styles.greeting}>
-                    StatsScreen
+                    Award
                 </Text>
             </View>
-
         </View>
     );
 };
@@ -55,4 +54,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default StatsScreen;
+export default RankScreen;

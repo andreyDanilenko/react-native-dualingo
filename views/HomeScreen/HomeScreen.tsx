@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { Button, StyleSheet, Text, View, TextInput } from 'react-native';
+import { Button, StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 import BaseImageCard from '../../components/Base/BaseImageCard';
 
 const dataCard = [
     {
-        name: 'Bell',
-        img: require('../../assets/navigation/nav-bell.png')
+        name: 'Calendar',
+        img: require('../../assets/navigation/nav-chest.png')
     },
     {
         name: 'Chest',
@@ -13,7 +13,7 @@ const dataCard = [
     },
     {
         name: 'Home',
-        img: require('../../assets/navigation/nav-home.png')
+        img: require('../../assets/words/city.svg')
     },
     {
         name: 'Shield',
@@ -25,11 +25,7 @@ const dataCard = [
 
 const HomeScreen = () => {
     return (
-
         <View style={styles.homeScreen}>
-            <View style={styles.navList}>
-                <Text>nav</Text> 
-            </View>
             <View style={styles.imageList}>
                 {
                     dataCard.map((data) => {
@@ -44,14 +40,23 @@ const HomeScreen = () => {
 const styles = StyleSheet.create({
     homeScreen: {
         backgroundColor: '#ffffff',
-        padding: 20,
+
         height: '100%',
         flex: 1,
     },
     navList: {
-        padding: 20,
+        paddingTop: 30,
+        flexDirection: 'row',
+        justifyContent: 'space-evenly'
+    },
+    navItem: {
+        padding: 10,
+        flex: 1,
+        backgroundColor: 'lightgrey',
+        borderBottomWidth: 1
     },
     imageList: {
+        padding: 20,
         width: '100%',
         flex: 1,
         flexDirection: 'row',
