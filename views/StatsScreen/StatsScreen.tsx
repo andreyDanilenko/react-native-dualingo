@@ -13,7 +13,7 @@ const StatsScreen = ({navigation}: any) => {
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.navItem}
-                    onPress={() => navigation.navigate('Award')}
+                    onPress={() => navigation.navigate('Awards')}
                 >
                     <Text style={{textAlign: 'center'}}> Award</Text>
                 </TouchableOpacity>

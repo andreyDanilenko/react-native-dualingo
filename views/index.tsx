@@ -4,7 +4,7 @@ import PlanScreen from "./PlanScreen/PlanScreen";
 import ProfileScreen from "./ProfileScreen/ProfileScreen";
 import RankScreen from "./RankScreen/RankScreen";
 import StatsScreen from "./StatsScreen/StatsScreen";
-import AwardScreen from "./AwardScreen/AwardScreen";
+import AwardsScreen from "./AwardsScreen/AwardsScreen";
 
 
 export {
@@ -14,5 +14,5 @@ export {
     ProfileScreen,
     RankScreen,
     StatsScreen,
-    AwardScreen
+    AwardsScreen
 }
