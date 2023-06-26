@@ -4,16 +4,16 @@ import BaseImageCard from '../../components/Base/BaseImageCard';
 
 const dataCard = [
     {
-        name: 'Calendar',
-        img: require('../../assets/navigation/nav-chest.png')
+        name: 'House',
+        img: require('../../assets/navigation/nav-home.png')
     },
     {
         name: 'Chest',
         img: require('../../assets/navigation/nav-chest.png')
     },
     {
-        name: 'Home',
-        img: require('../../assets/words/city.svg')
+        name: 'Dumbbell',
+        img: require('../../assets/navigation/nav-dumbbell.png')
     },
     {
         name: 'Shield',
@@ -26,6 +26,9 @@ const dataCard = [
 const HomeScreen = () => {
     return (
         <View style={styles.homeScreen}>
+            <View style={styles.titleContainer}>
+                <Text style={styles.title}>Как переводится "дом"?</Text> 
+            </View>
             <View style={styles.imageList}>
                 {
                     dataCard.map((data) => {
@@ -40,21 +43,20 @@ const HomeScreen = () => {
 const styles = StyleSheet.create({
     homeScreen: {
         backgroundColor: '#ffffff',
-
         height: '100%',
         flex: 1,
     },
-    navList: {
-        paddingTop: 30,
-        flexDirection: 'row',
-        justifyContent: 'space-evenly'
+    titleContainer: {
+        backgroundColor: '#58CC02',
     },
-    navItem: {
-        padding: 10,
-        flex: 1,
-        backgroundColor: 'lightgrey',
-        borderBottomWidth: 1
+
+    title: {
+        fontSize: 24,
+        padding: 20,
+        paddingTop: 40,
+        color: '#fff',
     },
+
     imageList: {
         padding: 20,
         width: '100%',

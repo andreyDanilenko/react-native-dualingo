@@ -26,7 +26,7 @@ const icons = {
 function MyTabBar({ state, descriptors, navigation }: any) {
     return (
         <View style={[styles.navigator, { flexDirection: 'row' }]}>
-            {state.routes.map((route, index) => {
+            {state.routes.map((route: any, index: any) => {
                 const { options } = descriptors[route.key];
                 const label =
                     options.tabBarLabel !== undefined
