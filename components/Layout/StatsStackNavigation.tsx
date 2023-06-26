@@ -2,7 +2,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { AwardsScreen, StatsScreen } from '../../views';
 
 const Stack = createNativeStackNavigator();
-
+// https://reactnavigation.org/docs/tab-view
 function StatsStackNavigation() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
