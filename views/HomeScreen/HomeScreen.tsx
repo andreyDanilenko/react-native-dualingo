@@ -4,20 +4,20 @@ import BaseImageCard from '../../components/Base/BaseImageCard';
 
 const dataCard = [
     {
-        name: 'House',
-        img: require('../../assets/navigation/nav-home.png')
+        name: 'City',
+        img: require('../../assets/words/city.png')
     },
     {
-        name: 'Chest',
-        img: require('../../assets/navigation/nav-chest.png')
+        name: 'Nine',
+        img: require('../../assets/words/nine.png')
     },
     {
-        name: 'Dumbbell',
-        img: require('../../assets/navigation/nav-dumbbell.png')
+        name: 'Tea',
+        img: require('../../assets/words/tea.png')
     },
     {
-        name: 'Shield',
-        img: require('../../assets/navigation/nav-shield.png')
+        name: 'Calendar',
+        img: require('../../assets/words/calendar.png')
     }
 ]
 
@@ -27,7 +27,7 @@ const HomeScreen = () => {
     return (
         <View style={styles.homeScreen}>
             <View style={styles.titleContainer}>
-                <Text style={styles.title}>Как переводится "дом"?</Text> 
+                <Text style={styles.title}>Как переводится "Календарь"?</Text> 
             </View>
             <View style={styles.imageList}>
                 {
@@ -51,8 +51,9 @@ const styles = StyleSheet.create({
     },
 
     title: {
-        fontSize: 24,
-        padding: 20,
+        fontSize: 20,
+        textAlign: 'center',
+        padding: 15,
         paddingTop: 40,
         color: '#fff',
     },

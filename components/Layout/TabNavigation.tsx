@@ -45,7 +45,6 @@ function MyTabBar({ state, descriptors, navigation }: any) {
                     });
 
                     if (!isFocused && !event.defaultPrevented) {
-                        // The `merge: true` option makes sure that the params inside the tab screen are preserved
                         navigation.navigate({ name: route.name, merge: true });
                     }
                 };
@@ -102,11 +101,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
-    greeting: {
-        fontSize: 20,
-        fontWeight: 'bold',
-        margin: 16,
-    },
     navigator: {
         justifyContent: 'space-between',
         padding: 10,
@@ -114,6 +108,7 @@ const styles = StyleSheet.create({
         paddingTop: 15,
         borderTopWidth: 2,
         borderTopColor: 'lightgrey',
+        backgroundColor: '#58CC02',
     },
     imageContainer: {},
     imageBlock: {
