@@ -83,7 +83,7 @@ function MyTabBar({ state, descriptors, navigation }: any) {
 const TabNavigation = () => {
     return (
         <NavigationContainer>
-            <Tab.Navigator tabBar={(props) => <MyTabBar {...props} />}>
+            <Tab.Navigator tabBar={(props) => <MyTabBar key="key" {...props} />}>
                 <Tab.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
                 <Tab.Screen name="Plan" component={PlanScreen} />
                 <Tab.Screen name="Rank" component={RankScreen} />

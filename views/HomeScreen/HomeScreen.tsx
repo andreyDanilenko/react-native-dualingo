@@ -1,38 +1,22 @@
 import { useState } from 'react';
 import { Button, StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 import BaseImageCard from '../../components/Base/BaseImageCard';
-
-const dataCard = [
-    {
-        name: 'City',
-        img: require('../../assets/words/city.png')
-    },
-    {
-        name: 'Nine',
-        img: require('../../assets/words/nine.png')
-    },
-    {
-        name: 'Tea',
-        img: require('../../assets/words/tea.png')
-    },
-    {
-        name: 'Calendar',
-        img: require('../../assets/words/calendar.png')
-    }
-]
-
+import { dataQuestions } from '../../mocks/qestions';
 
 
 const HomeScreen = () => {
+    const [countQuestion, setCountQuestion] = useState(1)
     return (
         <View style={styles.homeScreen}>
             <View style={styles.titleContainer}>
-                <Text style={styles.title}>Как переводится "Календарь"?</Text> 
+                <Text style={styles.title}>{dataQuestions[countQuestion].question}</Text> 
             </View>
             <View style={styles.imageList}>
                 {
-                    dataCard.map((data) => {
-                        return <BaseImageCard img={data.img} name={data.name} key={data.name} />
+                    dataQuestions[countQuestion].options.map((data) => {
+                        console.log(data);
+                        
+                        return <BaseImageCard img={data.image} text={data.text} key={data.id} />
                     })
                 }
             </View>

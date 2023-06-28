@@ -3,17 +3,19 @@ import { Button, StyleSheet, Text, View, TextInput, Image } from 'react-native';
 
 interface IProps {
   img: object 
-  name: string
+  text: string
 }
 
-const BaseImageCard = ({img, name}: IProps ) => {
+const BaseImageCard = ({img, text}: IProps ) => {
+    console.log(img, text);
+    
     return (
         <View style={styles.container}>
             <Image
                 style={styles.image}
                 resizeMode="contain"
                 source={img} />
-            <Text style={styles.text}>{name}</Text>
+            <Text style={styles.text}>{text}</Text>
         </View>
     );
 };
