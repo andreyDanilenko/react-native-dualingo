@@ -29,8 +29,8 @@ const CorrelationBlock = () => {
                 }
             </View>
             <View style={styles.buttons} >
-                <TouchableOpacity onPress={() => console.log()} style={styles.button}>
-                    <Text style={styles.textButton} >ПРОВЕРИТЬ</Text>
+                <TouchableOpacity onPress={onGiveAnswer} style={[styles.button, selected ? styles.buttonActive : {}]}>
+                    <Text style={[styles.textButton, selected ? styles.textButtonActive : {}]} >ПРОВЕРИТЬ</Text>
                 </TouchableOpacity>
             </View>
         </View>
@@ -65,14 +65,30 @@ const styles = StyleSheet.create({
         alignContent: 'space-between'
     },
     buttons: {
+        paddingTop: 0,
         padding: 20,
     },
     button: {
-
+        padding: 10,
+        borderWidth: 2,
+        backgroundColor: '#e5e5e5',
+        borderColor: 'lightgrey',
+        borderRadius: 10,
+        borderBottomWidth: 4
+    },
+    buttonActive: {
+        backgroundColor: '#58cc02',
+        borderColor: '#58cc02',
+    },
+    textButton: {
+        textAlign: 'center',
+        fontWeight: '700',
+        fontSize: 20,
+        color: '#afafaf',
     },
 
-    textButton: {
-        textAlign: 'center'
+    textButtonActive: {
+        color: '#ffffff',
     }
 });
 
