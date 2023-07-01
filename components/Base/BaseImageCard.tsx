@@ -1,11 +1,10 @@
-import { useState } from 'react';
-import { Button, StyleSheet, Text, View, TextInput, Image, Pressable } from 'react-native';
+import {  StyleSheet, Text, Image, Pressable } from 'react-native';
 
 interface IProps {
     img: object
     text: string
     isSelected: boolean
-    onPress: any
+    onPress: () => void
 }
 
 const BaseImageCard = ({ img, text, isSelected, onPress }: IProps) => {
@@ -30,7 +29,6 @@ const styles = StyleSheet.create({
         borderColor: 'lightgrey',
         borderRadius: 10,
         borderBottomWidth: 4
-
     },
 
     selected: {
@@ -42,9 +40,11 @@ const styles = StyleSheet.create({
         width: '100%',
         flex: 1,
     },
+
     text: {
         textAlign: 'center',
     },
+    
     selectedText: {
         textAlign: 'center',
         color: '#1cb0f6'

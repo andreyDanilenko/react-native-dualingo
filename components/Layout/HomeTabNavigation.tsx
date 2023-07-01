@@ -1,20 +1,18 @@
 
-import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {
     ProfileScreen,
     RankScreen,
     NewsletterScreen,
     PlanScreen,
-    StatsScreen,
     HomeScreen
 } from '../../views'
 import { StyleSheet, View, Image, TouchableOpacity } from 'react-native';
 import StatsStackNavigation from './StatsStackNavigation';
 
-const Tab = createBottomTabNavigator();
+const HomeTab = createBottomTabNavigator();
 
-const icons = {
+const icons: any = {
     Home: require('../../assets/navigation/nav-home.png'),
     Profile: require('../../assets/navigation/nav-profile.png'),
     Plan: require('../../assets/navigation/nav-dumbbell.png'),
@@ -28,12 +26,12 @@ function MyTabBar({ state, descriptors, navigation }: any) {
         <View style={[styles.navigator, { flexDirection: 'row' }]}>
             {state.routes.map((route: any, index: any) => {
                 const { options } = descriptors[route.key];
-                const label =
-                    options.tabBarLabel !== undefined
-                        ? options.tabBarLabel
-                        : options.title !== undefined
-                            ? options.title
-                            : route.name;
+                // const label =
+                //     options.tabBarLabel !== undefined
+                //         ? options.tabBarLabel
+                //         : options.title !== undefined
+                //             ? options.title
+                //             : route.name;
 
                 const isFocused = state.index === index;
 
@@ -66,7 +64,7 @@ function MyTabBar({ state, descriptors, navigation }: any) {
                         onLongPress={onLongPress}
                         style={styles.imageContainer}
                     >
-                        <View  style={[styles.imageBlock, isFocused && styles.blockFocused]}>
+                        <View style={[styles.imageBlock, isFocused && styles.blockFocused]}>
                             <Image
                                 style={[styles.image]}
                                 resizeMode="contain"
@@ -80,18 +78,16 @@ function MyTabBar({ state, descriptors, navigation }: any) {
     );
 }
 
-const TabNavigation = () => {
+const HomeTabNavigation = () => {
     return (
-        <NavigationContainer>
-            <Tab.Navigator tabBar={(props) => <MyTabBar key="key" {...props} />}>
-                <Tab.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
-                <Tab.Screen name="Plan" component={PlanScreen} />
-                <Tab.Screen name="Rank" component={RankScreen} />
-                <Tab.Screen name="Profile" component={ProfileScreen} />
-                <Tab.Screen name="Stats" component={StatsStackNavigation} options={{ headerShown: false }}/>
-                <Tab.Screen name="Newsletter" component={NewsletterScreen} />
-            </Tab.Navigator>
-        </NavigationContainer>
+        <HomeTab.Navigator tabBar={(props) => <MyTabBar key="key" {...props} />}>
+            <HomeTab.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
+            <HomeTab.Screen name="Plan" component={PlanScreen} options={{}} />
+            <HomeTab.Screen name="Rank" component={RankScreen} />
+            <HomeTab.Screen name="Profile" component={ProfileScreen} />
+            <HomeTab.Screen name="Stats" component={StatsStackNavigation} options={{ headerShown: false }} />
+            <HomeTab.Screen name="Newsletter" component={NewsletterScreen} />
+        </HomeTab.Navigator>
     );
 };
 
@@ -129,8 +125,6 @@ const styles = StyleSheet.create({
         borderColor: '#1cb0f6',
         backgroundColor: '#1cb0f630'
     },
-
-
 });
 
-export default TabNavigation; 
+export default HomeTabNavigation; 

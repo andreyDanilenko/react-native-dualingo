@@ -1,61 +1,31 @@
-import { useState } from 'react';
-import { Button, StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
-import BaseImageCard from '../../components/Base/BaseImageCard';
-import { dataQuestions } from '../../mocks/qestions';
 
+import {  StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
-const HomeScreen = () => {
-
-    const [countQuestion, setCountQuestion] = useState(0)
-    const [selected, setSelected] = useState('')
-
+const HomeScreen = ({ navigation }: any) => {
     return (
         <View style={styles.homeScreen}>
-            <View style={styles.titleContainer}>
-                <Text style={styles.title}>{dataQuestions[countQuestion].question}</Text>
-            </View>
-            <View style={styles.imageList} >
-                {
-                    dataQuestions[countQuestion].options.map((data) => {
-                        return <BaseImageCard
-                            img={data.image}
-                            text={data.text} key={data.id}
-                            isSelected={selected === data.id}
-                            onPress={() => setSelected(data.id)} />
-                    })
-                }
-            </View>
+            <TouchableOpacity
+                style={styles.button}
+                onPress={() => navigation.navigate('Game')}
+            >
+                <Text style={styles.textButton}> Start Game</Text>
+            </TouchableOpacity>
         </View>
     );
 };
 
 const styles = StyleSheet.create({
     homeScreen: {
-        backgroundColor: '#ffffff',
-        height: '100%',
+        paddingTop: 100,
         flex: 1,
+        justifyContent: 'center',
+        alignContent: 'center'
     },
-    titleContainer: {
-        backgroundColor: '#58CC02',
-    },
+    button: {
 
-    title: {
-        fontSize: 20,
-        textAlign: 'center',
-        padding: 15,
-        paddingTop: 40,
-        color: '#fff',
     },
+    textButton: {
 
-    imageList: {
-        padding: 20,
-        width: '100%',
-        flex: 1,
-        flexDirection: 'row',
-        flexWrap: 'wrap',
-        justifyContent: 'space-between',
-        alignContent: 'space-between'
-    },
+    }
 });
-
-export default HomeScreen;
+export default HomeScreen

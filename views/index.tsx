@@ -5,7 +5,7 @@ import ProfileScreen from "./ProfileScreen/ProfileScreen";
 import RankScreen from "./RankScreen/RankScreen";
 import StatsScreen from "./StatsScreen/StatsScreen";
 import AwardsScreen from "./AwardsScreen/AwardsScreen";
-
+import LoadingScreen from "./LoadingScreen/LoadingScreen";
 
 export {
     HomeScreen,
@@ -14,5 +14,6 @@ export {
     ProfileScreen,
     RankScreen,
     StatsScreen,
-    AwardsScreen
+    AwardsScreen,
+    LoadingScreen
 }
