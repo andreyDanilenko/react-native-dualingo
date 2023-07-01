@@ -1,22 +1,22 @@
 import { useState } from 'react';
-import { Button, StyleSheet, Text, View, TextInput, Image } from 'react-native';
+import { Button, StyleSheet, Text, View, TextInput, Image, Pressable } from 'react-native';
 
 interface IProps {
-  img: object 
-  text: string
+    img: object
+    text: string
+    isSelected: boolean
+    onPress: any
 }
 
-const BaseImageCard = ({img, text}: IProps ) => {
-    console.log(img, text);
-    
+const BaseImageCard = ({ img, text, isSelected, onPress }: IProps) => {
     return (
-        <View style={styles.container}>
+        <Pressable style={[styles.container, isSelected ? styles.selected : {}]} onPress={onPress}>
             <Image
                 style={styles.image}
                 resizeMode="contain"
                 source={img} />
-            <Text style={styles.text}>{text}</Text>
-        </View>
+            <Text style={isSelected ? styles.selectedText : styles.text}>{text}</Text>
+        </Pressable>
     );
 };
 
@@ -32,17 +32,22 @@ const styles = StyleSheet.create({
         borderBottomWidth: 4
 
     },
-    greeting: {
-        fontSize: 20,
-        fontWeight: 'bold',
-        margin: 16,
+
+    selected: {
+        backgroundColor: '#ddf4ff',
+        borderColor: '#81d5fe'
     },
+
     image: {
         width: '100%',
         flex: 1,
     },
-    text: { 
+    text: {
         textAlign: 'center',
+    },
+    selectedText: {
+        textAlign: 'center',
+        color: '#1cb0f6'
     },
 
 });

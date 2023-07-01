@@ -5,18 +5,23 @@ import { dataQuestions } from '../../mocks/qestions';
 
 
 const HomeScreen = () => {
-    const [countQuestion, setCountQuestion] = useState(1)
+
+    const [countQuestion, setCountQuestion] = useState(0)
+    const [selected, setSelected] = useState('')
+
     return (
         <View style={styles.homeScreen}>
             <View style={styles.titleContainer}>
-                <Text style={styles.title}>{dataQuestions[countQuestion].question}</Text> 
+                <Text style={styles.title}>{dataQuestions[countQuestion].question}</Text>
             </View>
-            <View style={styles.imageList}>
+            <View style={styles.imageList} >
                 {
                     dataQuestions[countQuestion].options.map((data) => {
-                        console.log(data);
-                        
-                        return <BaseImageCard img={data.image} text={data.text} key={data.id} />
+                        return <BaseImageCard
+                            img={data.image}
+                            text={data.text} key={data.id}
+                            isSelected={selected === data.id}
+                            onPress={() => setSelected(data.id)} />
                     })
                 }
             </View>
