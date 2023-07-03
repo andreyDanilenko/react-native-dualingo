@@ -9,7 +9,7 @@ const CorrelationBlock = () => {
     const [selected, setSelected] = useState('')
 
     const onGiveAnswer = () => {
-
+        
     }
 
     return (
