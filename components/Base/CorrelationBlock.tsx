@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import BaseImageCard from './BaseImageCard';
 import { dataQuestions } from '../../mocks/qestions';
+import BaseImageCard from './BaseImageCard';
 import BaseButton from './BaseButton';
-
 
 const CorrelationBlock = () => {
     const [countQuestion, setCountQuestion] = useState(0)

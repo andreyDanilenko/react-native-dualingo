@@ -1,4 +1,4 @@
-import {  StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 
 interface IProps {
     title: string
@@ -33,7 +33,6 @@ const styles = StyleSheet.create({
         fontSize: 20,
         color: '#afafaf',
     },
-
     textButtonActive: {
         color: '#ffffff',
     }

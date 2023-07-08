@@ -1,4 +1,3 @@
-
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {
     ProfileScreen,
@@ -70,7 +69,6 @@ function MyTabBar({ state, descriptors, navigation }: any) {
                                 resizeMode="contain"
                                 source={icons[route.name]} />
                         </View>
-
                     </TouchableOpacity>
                 );
             })}
