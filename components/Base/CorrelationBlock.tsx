@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { Button, StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import BaseImageCard from './BaseImageCard';
 import { dataQuestions } from '../../mocks/qestions';
+import BaseButton from './BaseButton';
 
 
 const CorrelationBlock = () => {
@@ -22,16 +23,19 @@ const CorrelationBlock = () => {
                     dataQuestions[countQuestion].options.map((data) => {
                         return <BaseImageCard
                             img={data.image}
-                            text={data.text} key={data.id}
+                            text={data.text} 
+                            key={data.text}
                             isSelected={selected === data.id}
                             onPress={() => setSelected(data.id)} />
                     })
                 }
             </View>
             <View style={styles.buttons} >
-                <TouchableOpacity onPress={onGiveAnswer} style={[styles.button, selected ? styles.buttonActive : {}]}>
-                    <Text style={[styles.textButton, selected ? styles.textButtonActive : {}]} >ПРОВЕРИТЬ</Text>
-                </TouchableOpacity>
+                <BaseButton
+                    title={'ПРОВЕРИТЬ'}
+                    isSelected={!!selected}
+                    onPress={onGiveAnswer}
+                />
             </View>
         </View>
     );
@@ -68,28 +72,6 @@ const styles = StyleSheet.create({
         paddingTop: 0,
         padding: 20,
     },
-    button: {
-        padding: 10,
-        borderWidth: 2,
-        backgroundColor: '#e5e5e5',
-        borderColor: 'lightgrey',
-        borderRadius: 10,
-        borderBottomWidth: 4
-    },
-    buttonActive: {
-        backgroundColor: '#58cc02',
-        borderColor: '#58cc02',
-    },
-    textButton: {
-        textAlign: 'center',
-        fontWeight: '700',
-        fontSize: 20,
-        color: '#afafaf',
-    },
-
-    textButtonActive: {
-        color: '#ffffff',
-    }
 });
 
 export default CorrelationBlock;

@@ -5,7 +5,7 @@ const NewsletterScreen = () => {
   return ( 
       <View style={styles.container}>
         <Text style={styles.greeting}>
-           Newsletter screen
+           Newsletter screens
         </Text>
       </View>
   );
