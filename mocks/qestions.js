@@ -1,6 +1,7 @@
 export const dataQuestions = [
     {
         question: 'Как переводится "Календарь"?',
+        type: 'correlation',
         options: [
             {
                 id: '1',
@@ -27,6 +28,7 @@ export const dataQuestions = [
     },
     {
         question: 'Как переводится "Город"?',
+        type: 'correlation',
         options: [
             {
                 id: '1',
@@ -53,6 +55,7 @@ export const dataQuestions = [
     },
     {
         question: 'Как переводится "Tea"?',
+        type: 'correlation',
         options: [
             {
                 id: '1',

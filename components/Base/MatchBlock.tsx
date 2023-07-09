@@ -1,9 +1,17 @@
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
-const MatchBlock = () => {
+interface IProps {
+  question: string
+  options: string | object
+  onGiveAnswer: any
+}
+
+const MatchBlock = ({question, options, onGiveAnswer}: IProps) => {
     return (
         <View>
-
+            <Text>
+                Match
+            </Text>
         </View>
     );
 };

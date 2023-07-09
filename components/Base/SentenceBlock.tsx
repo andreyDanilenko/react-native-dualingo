@@ -1,9 +1,15 @@
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
-const SentenceBlock = () => {
+interface IProps {
+    question: string
+    options: string | object
+    onGiveAnswer: any
+  }
+
+const SentenceBlock = ({question, options, onGiveAnswer}: IProps) => {
     return (
         <View>
-
+           <Text>Sentence</Text>
         </View>
     );
 };

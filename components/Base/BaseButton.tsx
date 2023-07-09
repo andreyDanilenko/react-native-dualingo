@@ -2,14 +2,16 @@ import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 
 interface IProps {
     title: string
-    isSelected: boolean
+    disabled: boolean
     onPress: () => void
 }
 
-const BaseButton = ({ isSelected, title, onPress }: IProps) => {
+const BaseButton = ({ disabled, title, onPress }: IProps) => {
+    console.log(disabled);
+    
     return (
-        <TouchableOpacity onPress={onPress} style={[styles.button, isSelected ? styles.buttonActive : {}]}>
-            <Text style={[styles.textButton, isSelected ? styles.textButtonActive : {}]} >{title}</Text>
+        <TouchableOpacity onPress={onPress} style={[styles.button, !disabled ? styles.buttonActive : {}]} disabled={disabled}>
+            <Text style={[styles.textButton, !disabled ? styles.textButtonActive : {}]} >{title}</Text>
         </TouchableOpacity>
     );
 };

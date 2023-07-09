@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import CorrelationBlock from '../../components/Base/CorrelationBlock';
 import LoadingScreen from '../LoadingScreen/LoadingScreen';
+import DistributingQuestionBlock from '../../components/Base/DistributingQuestionBlock';
 
 
 const GameScreen = () => {
@@ -11,7 +12,7 @@ const GameScreen = () => {
         setLoaded(false)
     }, 3000)
 
-    return (!loaded ? <CorrelationBlock /> : <LoadingScreen />);
+    return (!loaded ? <DistributingQuestionBlock /> : <LoadingScreen />);
 };
 
 export default GameScreen;

@@ -1,39 +1,56 @@
 import { useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Alert, StyleSheet, Text, View } from 'react-native';
 import { dataQuestions } from '../../mocks/qestions';
+import ICorrelationQuestion from '../../types/correlationQuestionType';
 import BaseImageCard from './BaseImageCard';
 import BaseButton from './BaseButton';
 
-const CorrelationBlock = () => {
-    const [countQuestion, setCountQuestion] = useState(0)
-    const [selected, setSelected] = useState('')
+interface IProps {
+    question: string
+    options: ICorrelationQuestion[] | []
+    onGiveAnswer: (selected: ICorrelationQuestion | null) => void
+}
 
-    const onGiveAnswer = () => {
+const CorrelationBlock = ({question, options, onGiveAnswer}: IProps) => {
+    const [selected, setSelected] = useState<ICorrelationQuestion | null>(null)
         
+    const onSelectedOption = () => {
+
+  
+        // if (selected?.correct) {
+        //    Alert.alert('Correct')
+        // } else {
+        //    Alert.alert('Wrong')
+        // }
+        // setCountQuestionIndex(count)
+        // onPress(selected)
+
+        setSelected(null)
+        onGiveAnswer(selected)
     }
 
     return (
         <View style={styles.homeScreen}>
             <View style={styles.titleContainer}>
-                <Text style={styles.title}>{dataQuestions[countQuestion].question}</Text>
+                <Text style={styles.title}>{question}</Text>
             </View>
             <View style={styles.imageList} >
                 {
-                    dataQuestions[countQuestion].options.map((data) => {
+                    options.map((data) => {
                         return <BaseImageCard
                             img={data.image}
                             text={data.text} 
                             key={data.text}
-                            isSelected={selected === data.id}
-                            onPress={() => setSelected(data.id)} />
+                            isSelected={selected?.id === data.id}
+                            onPress={() => setSelected(data)} />
                     })
                 }
             </View>
             <View style={styles.buttons} >
                 <BaseButton
                     title={'ПРОВЕРИТЬ'}
-                    isSelected={!!selected}
-                    onPress={onGiveAnswer}
+                    disabled={!selected}
+                    onPress={onSelectedOption}
                 />
             </View>
         </View>
