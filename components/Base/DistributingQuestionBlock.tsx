@@ -7,7 +7,7 @@ import MatchBlock from './MatchBlock';
 import SentenceBlock from './SentenceBlock';
 
 
-const DistributingQuestionBlock = () => {
+const DistributingQuestionBlock = (): JSX.Element => {
     const [countQuestionIndex, setCountQuestionIndex] = useState(0)
   
     const onGiveAnswerCorrelation = (answer: ICorrelationQuestion | null) => {
@@ -28,24 +28,25 @@ const DistributingQuestionBlock = () => {
     const getComponent = () => {
         switch (dataQuestions[countQuestionIndex].type) {
             case 'correlation':
-             return (<CorrelationBlock 
+            return (<CorrelationBlock 
                 options={dataQuestions[countQuestionIndex].options} 
                 question={dataQuestions[countQuestionIndex].question} 
                 onGiveAnswer={onGiveAnswerCorrelation}
             />)
             case 'match':
-                return (<MatchBlock 
-                   options={dataQuestions[countQuestionIndex].options} 
-                   question={dataQuestions[countQuestionIndex].question} 
-                   onGiveAnswer={onGiveAnswerMatch}
-               />)
-               case 'sentence':
-                return (<SentenceBlock 
-                   options={dataQuestions[countQuestionIndex].options} 
-                   question={dataQuestions[countQuestionIndex].question} 
-                   onGiveAnswer={onGiveAnswerSentence}
-               />)
-            
+            return (<MatchBlock 
+                options={dataQuestions[countQuestionIndex].options} 
+                question={dataQuestions[countQuestionIndex].question} 
+                onGiveAnswer={onGiveAnswerMatch}
+            />)
+            case 'sentence':
+            return (<SentenceBlock 
+                options={dataQuestions[countQuestionIndex].options} 
+                question={dataQuestions[countQuestionIndex].question} 
+                onGiveAnswer={onGiveAnswerSentence}
+            />)
+            default:
+            return (<></>)  
         }
     }
 
