@@ -9,7 +9,8 @@ import SentenceBlock from './SentenceBlock';
 
 const DistributingQuestionBlock = (): JSX.Element => {
     const [countQuestionIndex, setCountQuestionIndex] = useState(0)
-  
+     console.log(Object.values(dataQuestions).length );
+     
     const onGiveAnswerCorrelation = (answer: ICorrelationQuestion | null) => {
         const count = countQuestionIndex < Object.values(dataQuestions).length - 1 ? countQuestionIndex + 1 : 0
         setCountQuestionIndex(count)

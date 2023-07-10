@@ -80,4 +80,58 @@ export const dataQuestions = [
             }
         ]
     },
+    {
+        question: 'Как переводится "Tea"?',
+        type: 'match',
+        options: [
+            {
+                id: '1',
+                image: require('../assets/words/city.png'),
+                text: 'City'
+            },
+            {
+                id: '2',
+                image: require('../assets/words/america.png'),
+                text: 'America'
+            },
+            {
+                id: '3',
+                image: require('../assets/words/tea.png'),
+                text: 'Tea',
+                correct: true,
+            },
+            {
+                id: '4',
+                image: require('../assets/words/television.png'),
+                text: 'Television'
+            }
+        ]
+    },
+    {
+        question: 'Как переводится "Tea"?',
+        type: 'sentence',
+        options: [
+            {
+                id: '1',
+                image: require('../assets/words/city.png'),
+                text: 'City'
+            },
+            {
+                id: '2',
+                image: require('../assets/words/america.png'),
+                text: 'America'
+            },
+            {
+                id: '3',
+                image: require('../assets/words/tea.png'),
+                text: 'Tea',
+                correct: true,
+            },
+            {
+                id: '4',
+                image: require('../assets/words/television.png'),
+                text: 'Television'
+            }
+        ]
+    },
 ]

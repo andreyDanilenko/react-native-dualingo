@@ -31,7 +31,7 @@ const SentenceBlock = ({question, options, onGiveAnswer}: IProps) => {
                 <Text style={styles.title}>{question}</Text>
             </View>
             <View style={styles.imageList} >
-                 Sentence
+                 <Text>Sentence</Text> 
             </View>
             <View style={styles.buttons} >
                 <BaseButton

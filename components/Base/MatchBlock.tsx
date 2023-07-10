@@ -31,7 +31,7 @@ const MatchBlock = ({question, options, onGiveAnswer}: IProps) => {
                 <Text style={styles.title}>{question}</Text>
             </View>
             <View style={styles.imageList} >
-                 Match
+               <Text>match</Text>  
             </View>
             <View style={styles.buttons} >
                 <BaseButton
