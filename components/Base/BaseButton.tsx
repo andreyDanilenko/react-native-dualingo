@@ -7,7 +7,7 @@ interface IProps {
 }
 
 const BaseButton = ({ disabled, title, onPress }: IProps) => {
-    console.log(disabled);
+    // console.log(disabled);
     
     return (
         <TouchableOpacity onPress={onPress} style={[styles.button, !disabled ? styles.buttonActive : {}]} disabled={disabled}>

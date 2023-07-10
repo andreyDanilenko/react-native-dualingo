@@ -2,11 +2,17 @@
 import {  StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 const HomeScreen = ({ navigation }: any) => {
+    
     return (
         <View style={styles.homeScreen}>
             <TouchableOpacity
                 style={styles.button}
-                onPress={() => navigation.navigate('Game')}
+                onPress={() => {
+                    /* 1. Navigate to the Details route with params */
+                    navigation.navigate('Game', {
+                      levelId: 86,
+                    });
+                  }}
             >
                 <Text style={styles.textButton}> Start Game</Text>
             </TouchableOpacity>

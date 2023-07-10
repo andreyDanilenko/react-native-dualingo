@@ -6,10 +6,16 @@ import ICorrelationQuestion from '../../types/questionType';
 import MatchBlock from './MatchBlock';
 import SentenceBlock from './SentenceBlock';
 
+interface IProps {
+    levelId: string
+}
 
-const DistributingQuestionBlock = (): JSX.Element => {
+
+const DistributingQuestionBlock = ({levelId}:IProps): JSX.Element => {
+    console.log('123', levelId);
+    
     const [countQuestionIndex, setCountQuestionIndex] = useState(0)
-     console.log(Object.values(dataQuestions).length );
+    //  console.log(Object.values(dataQuestions).length );
      
     const onGiveAnswerCorrelation = (answer: ICorrelationQuestion | null) => {
         const count = countQuestionIndex < Object.values(dataQuestions).length - 1 ? countQuestionIndex + 1 : 0
