@@ -2,7 +2,7 @@ import { StyleSheet, View } from 'react-native';
 import { dataQuestions } from '../../mocks/qestions';
 import { useState } from 'react';
 import CorrelationBlock from './CorrelationBlock';
-import ICorrelationQuestion from '../../types/correlationQuestionType';
+import ICorrelationQuestion from '../../types/questionType';
 import MatchBlock from './MatchBlock';
 import SentenceBlock from './SentenceBlock';
 

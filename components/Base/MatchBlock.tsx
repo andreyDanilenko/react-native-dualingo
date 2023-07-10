@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from 'react-native';
-import ICorrelationQuestion from '../../types/correlationQuestionType';
+import ICorrelationQuestion from '../../types/questionType';
 import { useState } from 'react';
 import BaseButton from './BaseButton';
 

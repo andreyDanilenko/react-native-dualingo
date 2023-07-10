@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native';
 import BaseButton from './BaseButton';
 import { useState } from 'react';
-import ICorrelationQuestion from '../../types/correlationQuestionType';
+import ICorrelationQuestion from '../../types/questionType';
 
 interface IProps {
     question: string

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Alert, StyleSheet, Text, View } from 'react-native';
 import { dataQuestions } from '../../mocks/qestions';
-import ICorrelationQuestion from '../../types/correlationQuestionType';
+import ICorrelationQuestion from '../../types/questionType';
 import BaseImageCard from './BaseImageCard';
 import BaseButton from './BaseButton';
 
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
         height: '100%',
         flex: 1,
     },
-    
+
     titleContainer: {
         backgroundColor: '#58CC02',
     },
