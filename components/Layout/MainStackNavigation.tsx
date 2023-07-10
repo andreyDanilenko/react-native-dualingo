@@ -4,7 +4,7 @@ import GameScreen from '../../views/GameScreen/GameScreen';
 import HomeTabNavigation from './HomeTabNavigation';
 
 const MainStack = createNativeStackNavigator();
-// https://reactnavigation.org/docs/tab-view
+// https://reactnavigation.org/docs/tab-view dfdfd
 function MainStackNavigation() {
     return (
         <NavigationContainer>
