@@ -16,7 +16,7 @@ const HomeScreen = ({ navigation }: any) => {
 const styles = StyleSheet.create({
     homeScreen: {
         position: 'relative',
-        paddingTop: 100,
+        paddingTop: 30,
         flex: 1,
         justifyContent: 'center',
         alignContent: 'center',
