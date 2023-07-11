@@ -10,8 +10,8 @@ interface IProps {
     }
 }
 
-const GameScreen = (props:IProps) => {
-    console.log('levelId', props.route.params);
+const GameScreen = ({route: {params}}:IProps) => {
+    console.log('levelId',);
     
     const [loaded, setLoaded] = useState(true)
 
@@ -19,7 +19,7 @@ const GameScreen = (props:IProps) => {
         setLoaded(false)
     }, 3000)
 
-    return (!loaded ? <DistributingQuestionBlock levelId={props.route.params.levelId} /> : <LoadingScreen />);
+    return (!loaded ? <DistributingQuestionBlock levelId={params.levelId} /> : <LoadingScreen />);
 };
 
 export default GameScreen;
