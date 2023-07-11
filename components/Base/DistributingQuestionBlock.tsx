@@ -10,7 +10,6 @@ interface IProps {
     levelId: string
 }
 
-
 const DistributingQuestionBlock = ({levelId}:IProps): JSX.Element => {
     console.log('123', levelId);
     
@@ -53,7 +52,7 @@ const DistributingQuestionBlock = ({levelId}:IProps): JSX.Element => {
                 onGiveAnswer={onGiveAnswerSentence}
             />)
             default:
-            return (<></>)  
+            return (<View></View>)  
         }
     }
 

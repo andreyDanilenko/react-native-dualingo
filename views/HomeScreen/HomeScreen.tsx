@@ -1,34 +1,34 @@
 
-import {  StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import {  StyleSheet, Text, View, TouchableOpacity, ScrollView } from 'react-native';
+import BaseModuleGame from '../../components/Base/BaseModuleGame';
 
 const HomeScreen = ({ navigation }: any) => {
     
     return (
         <View style={styles.homeScreen}>
-            <TouchableOpacity
-                style={styles.button}
-                onPress={() => {
-                    /* 1. Navigate to the Details route with params */
-                    navigation.navigate('Game', {
-                      levelId: 86,
-                    });
-                  }}
-            >
-                <Text style={styles.textButton}> Start Game</Text>
-            </TouchableOpacity>
+               <ScrollView>
+                     <BaseModuleGame navigation={navigation} />
+               </ScrollView> 
         </View>
     );
 };
 
 const styles = StyleSheet.create({
     homeScreen: {
+        position: 'relative',
         paddingTop: 100,
         flex: 1,
         justifyContent: 'center',
-        alignContent: 'center'
+        alignContent: 'center',
+        gap: 10
     },
-    button: {
-
+    button: {   
+        display: 'flex',
+        
+        backgroundColor: 'green',
+        borderRadius: 50,
+        width: 100,
+        height: 100
     },
     textButton: {
 
