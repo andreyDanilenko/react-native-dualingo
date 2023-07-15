@@ -15,13 +15,6 @@ const CorrelationBlock = ({question, options, onGiveAnswer}: IProps) => {
     const [selected, setSelected] = useState<ICorrelationQuestion | null>(null)
         
     const onSelectedOption = () => {
-        // if (selected?.correct) {
-        //    Alert.alert('Correct')
-        // } else {
-        //    Alert.alert('Wrong')
-        // }
-        // setCountQuestionIndex(count)
-        // onPress(selected)
 
         setSelected(null)
         onGiveAnswer(selected)
@@ -63,19 +56,20 @@ const styles = StyleSheet.create({
     },
 
     titleContainer: {
-        backgroundColor: '#58CC02',
+        // backgroundColor: '#58CC02',
     },
 
     title: {
-        fontSize: 20,
+        fontSize: 22,
         textAlign: 'center',
+        fontWeight: 600,
         padding: 15,
-        paddingTop: 40,
-        color: '#fff',
+        paddingTop: 5,
     },
 
     imageList: {
         padding: 20,
+        paddingTop: 5,
         width: '100%',
         flex: 1,
         flexDirection: 'row',

@@ -7,6 +7,7 @@ const BaseModuleGame = ({ navigation }: any) => {
         <View style={styles.homeScreen}>
             <TouchableOpacity
                 style={styles.button}
+                key={1}
                 onPress={() => {
                     navigation.navigate('Game', {
                       levelId: 1,
@@ -17,6 +18,8 @@ const BaseModuleGame = ({ navigation }: any) => {
             </TouchableOpacity>
             <TouchableOpacity
                 style={styles.button}
+                key={2}
+
                 onPress={() => {
                     navigation.navigate('Game', {
                       levelId: 2,
@@ -27,6 +30,8 @@ const BaseModuleGame = ({ navigation }: any) => {
             </TouchableOpacity>
             <TouchableOpacity
                 style={styles.button}
+                key={3}
+
                 onPress={() => {
                     navigation.navigate('Game', {
                       levelId: 3,
@@ -37,6 +42,8 @@ const BaseModuleGame = ({ navigation }: any) => {
             </TouchableOpacity>
             <TouchableOpacity
                 style={styles.button}
+                key={4}
+
                 onPress={() => {
                     navigation.navigate('Game', {
                       levelId: 4,
@@ -47,6 +54,8 @@ const BaseModuleGame = ({ navigation }: any) => {
             </TouchableOpacity>
             <TouchableOpacity
                 style={styles.button}
+                key={5}
+
                 onPress={() => {
                     navigation.navigate('Game', {
                       levelId: 5,
@@ -57,6 +66,8 @@ const BaseModuleGame = ({ navigation }: any) => {
             </TouchableOpacity>
             <TouchableOpacity
                 style={styles.button}
+                key={6}
+
                 onPress={() => {
                     navigation.navigate('Game', {
                       levelId: 6,
@@ -66,6 +77,8 @@ const BaseModuleGame = ({ navigation }: any) => {
                 <Text style={styles.textButton}> sixth</Text>
             </TouchableOpacity><TouchableOpacity
                 style={styles.button}
+                key={7}
+
                 onPress={() => {
                     navigation.navigate('Game', {
                       levelId: 7,
@@ -76,6 +89,8 @@ const BaseModuleGame = ({ navigation }: any) => {
             </TouchableOpacity>
             <TouchableOpacity
                 style={styles.button}
+                key={8}
+
                 onPress={() => {
                     navigation.navigate('Game', {
                       levelId: 8,
@@ -86,6 +101,8 @@ const BaseModuleGame = ({ navigation }: any) => {
             </TouchableOpacity>
             <TouchableOpacity
                 style={styles.button}
+                key={9}
+
                 onPress={() => {
                     navigation.navigate('Game', {
                       levelId: 9,
@@ -96,6 +113,9 @@ const BaseModuleGame = ({ navigation }: any) => {
             </TouchableOpacity>
             <TouchableOpacity
                 style={styles.button}
+
+                key={10}
+
                 onPress={() => {
                     navigation.navigate('Game', {
                       levelId: 10,
@@ -106,6 +126,8 @@ const BaseModuleGame = ({ navigation }: any) => {
             </TouchableOpacity>
             <TouchableOpacity
                 style={styles.button}
+                key={11}
+
                 onPress={() => {
                     navigation.navigate('Game', {
                       levelId: 11,

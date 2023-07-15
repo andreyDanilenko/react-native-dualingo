@@ -7,12 +7,14 @@ const AwardsScreen = ({ navigation }: any) => {
             <View style={styles.navList}>
                 <TouchableOpacity
                     style={styles.navItem}
+                    key={34}
                     onPress={() => navigation.navigate('Stats')}
                 >
                     <Text style={{ textAlign: 'center' }}> Stats </Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.navItem}
+                    key={234}
                     onPress={() => navigation.navigate('Awards')}
                 >
                     <Text style={{ textAlign: 'center' }}> Award</Text>

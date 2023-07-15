@@ -60,10 +60,11 @@ function MyTabBar({ state, descriptors, navigation }: any) {
                         accessibilityLabel={options.tabBarAccessibilityLabel}
                         testID={options.tabBarTestID}
                         onPress={onPress}
+                        key={options.tabBarTestID}
                         onLongPress={onLongPress}
                         style={styles.imageContainer}
                     >
-                        <View style={[styles.imageBlock, isFocused && styles.blockFocused]}>
+                        <View key={options.tabBarTestID} style={[styles.imageBlock, isFocused && styles.blockFocused]}>
                             <Image
                                 style={[styles.image]}
                                 resizeMode="contain"
@@ -78,7 +79,7 @@ function MyTabBar({ state, descriptors, navigation }: any) {
 
 const HomeTabNavigation = () => {
     return (
-        <HomeTab.Navigator tabBar={(props) => <MyTabBar key="key" {...props} />}>
+        <HomeTab.Navigator tabBar={(props) => <MyTabBar {...props} />}>
             <HomeTab.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
             <HomeTab.Screen name="Plan" component={PlanScreen} options={{}} />
             <HomeTab.Screen name="Rank" component={RankScreen} />

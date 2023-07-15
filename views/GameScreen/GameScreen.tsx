@@ -11,7 +11,7 @@ interface IProps {
 }
 
 const GameScreen = ({route: {params}}:IProps) => {
-    console.log('levelId',);
+    console.log('levelId', params.levelId);
     
     const [loaded, setLoaded] = useState(true)
 
