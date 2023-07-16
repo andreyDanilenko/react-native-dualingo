@@ -4,9 +4,24 @@ const BaseModuleGame = ({ navigation }: any) => {
     console.log(navigation);
     
     return (
-        <View style={styles.homeScreen}>
+       <View style={styles.baseModuleGame}>
+        <View>
+            <View>
+              <Text>Раздел 1</Text>
+              <Text>Узнаете основные фразы расскажете откуда вы.</Text>
+            </View>
+            <View>
             <TouchableOpacity
-                style={styles.button}
+                style={[styles.button]}
+                key={8}
+            >
+                <Text style={styles.textButton}>info</Text>
+            </TouchableOpacity>
+            </View>
+        </View>
+        <View style={styles.gamesBlock}>
+            <TouchableOpacity
+                style={[styles.button, styles.buttonFirst]}
                 key={1}
                 onPress={() => {
                     navigation.navigate('Game', {
@@ -14,10 +29,10 @@ const BaseModuleGame = ({ navigation }: any) => {
                     });
                   }}
             >
-                <Text style={styles.textButton}> first</Text>
+                <Text style={styles.textButton}> </Text>
             </TouchableOpacity>
             <TouchableOpacity
-                style={styles.button}
+                style={[styles.button, styles.buttonSecond]}
                 key={2}
 
                 onPress={() => {
@@ -26,10 +41,10 @@ const BaseModuleGame = ({ navigation }: any) => {
                     });
                   }}
             >
-                <Text style={styles.textButton}> second</Text>
+                <Text style={styles.textButton}></Text>
             </TouchableOpacity>
             <TouchableOpacity
-                style={styles.button}
+                style={[styles.button, styles.buttonThird]}
                 key={3}
 
                 onPress={() => {
@@ -38,10 +53,10 @@ const BaseModuleGame = ({ navigation }: any) => {
                     });
                   }}
             >
-                <Text style={styles.textButton}> third</Text>
+                <Text style={styles.textButton}></Text>
             </TouchableOpacity>
             <TouchableOpacity
-                style={styles.button}
+                style={[styles.button, styles.buttonFourth]}
                 key={4}
 
                 onPress={() => {
@@ -50,10 +65,10 @@ const BaseModuleGame = ({ navigation }: any) => {
                     });
                   }}
             >
-                <Text style={styles.textButton}> fourth</Text>
+                <Text style={styles.textButton}></Text>
             </TouchableOpacity>
             <TouchableOpacity
-                style={styles.button}
+                style={[styles.button, styles.buttonFifth]}
                 key={5}
 
                 onPress={() => {
@@ -62,10 +77,10 @@ const BaseModuleGame = ({ navigation }: any) => {
                     });
                   }}
             >
-                <Text style={styles.textButton}> fifth</Text>
+                <Text style={styles.textButton}></Text>
             </TouchableOpacity>
             <TouchableOpacity
-                style={styles.button}
+                style={[styles.button, styles.buttonSixth]}
                 key={6}
 
                 onPress={() => {
@@ -74,9 +89,9 @@ const BaseModuleGame = ({ navigation }: any) => {
                     });
                   }}
             >
-                <Text style={styles.textButton}> sixth</Text>
+                <Text style={styles.textButton}></Text>
             </TouchableOpacity><TouchableOpacity
-                style={styles.button}
+                style={[styles.button, styles.buttonSeventh]}
                 key={7}
 
                 onPress={() => {
@@ -85,10 +100,10 @@ const BaseModuleGame = ({ navigation }: any) => {
                     });
                   }}
             >
-                <Text style={styles.textButton}> seventh</Text>
+                <Text style={styles.textButton}></Text>
             </TouchableOpacity>
             <TouchableOpacity
-                style={styles.button}
+                style={[styles.button, styles.buttonEighth]}
                 key={8}
 
                 onPress={() => {
@@ -97,10 +112,10 @@ const BaseModuleGame = ({ navigation }: any) => {
                     });
                   }}
             >
-                <Text style={styles.textButton}> eight</Text>
+                <Text style={styles.textButton}></Text>
             </TouchableOpacity>
             <TouchableOpacity
-                style={styles.button}
+                style={[styles.button, styles.buttonNinth]}
                 key={9}
 
                 onPress={() => {
@@ -109,10 +124,10 @@ const BaseModuleGame = ({ navigation }: any) => {
                     });
                   }}
             >
-                <Text style={styles.textButton}> eight</Text>
+                <Text style={styles.textButton}></Text>
             </TouchableOpacity>
             <TouchableOpacity
-                style={styles.button}
+                style={[styles.button, styles.buttonTenth]}
 
                 key={10}
 
@@ -122,10 +137,10 @@ const BaseModuleGame = ({ navigation }: any) => {
                     });
                   }}
             >
-                <Text style={styles.textButton}> eight</Text>
+                <Text style={styles.textButton}></Text>
             </TouchableOpacity>
             <TouchableOpacity
-                style={styles.button}
+                style={[styles.button, styles.buttonEleventh]}
                 key={11}
 
                 onPress={() => {
@@ -134,26 +149,71 @@ const BaseModuleGame = ({ navigation }: any) => {
                     });
                   }}
             >
-                <Text style={styles.textButton}> eight</Text>
+                <Text style={styles.textButton}></Text>
             </TouchableOpacity>
         </View>
+      </View>
     );
 };
 
 const styles = StyleSheet.create({
-    homeScreen: {
+    baseModuleGame: {
+      
+    },
+    gamesBlock: {
         position: 'relative',
         flex: 1,
-        justifyContent: 'center',
-        alignContent: 'center',
         gap: 10
     },
     button: {   
-        display: 'flex',
-        backgroundColor: 'green',
+      position: 'relative',
+        backgroundColor: '#58cc02',
+        marginLeft: 'auto',
+        marginRight: 'auto',
         borderRadius: 50,
-        width: 100,
-        height: 100
+        borderBottomWidth: 5,
+        borderBottomColor: '#008000',
+        width: 75,
+        height: 75
+    },
+    buttonPosition: {
+      position: 'absolute',
+      width: '100%',
+      height: '100%',
+      backgroundColor: 'red'
+    },
+    buttonFirst: {
+      
+    },
+    buttonSecond: {
+      left: 40,
+    },
+    buttonThird: {
+      left: 70,
+    },
+    buttonFourth: {
+      left: 40,
+    },
+    buttonFifth: {
+      
+    },
+    buttonSixth: {
+       right: 40
+    },
+    buttonSeventh: {
+      right: 70,
+    },
+    buttonEighth: {
+      right: 40,
+    },
+    buttonNinth: {
+      
+    },
+    buttonTenth: {
+      left: 40,
+    },
+    buttonEleventh: {
+
     },
     textButton: {
         display: 'flex',

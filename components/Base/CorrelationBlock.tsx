@@ -20,6 +20,14 @@ const CorrelationBlock = ({question, options, onGiveAnswer}: IProps) => {
         onGiveAnswer(selected)
     }
 
+    const onWrong = () => {
+
+    }
+
+    const onCorrect = () => {
+
+    }
+ 
     return (
         <View style={styles.homeScreen}>
             <View style={styles.titleContainer}>
