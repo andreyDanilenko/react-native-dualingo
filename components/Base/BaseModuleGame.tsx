@@ -1,8 +1,13 @@
 import {  StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 const BaseModuleGame = ({ navigation }: any) => {
-    console.log(navigation);
-    
+
+    const onLevel = (levelId: number): void => {
+        navigation.navigate('Game', {
+          levelId
+        })
+    }
+
     return (
        <View style={styles.baseModuleGame}>
         <View>
@@ -12,9 +17,9 @@ const BaseModuleGame = ({ navigation }: any) => {
             </View>
             <View>
             <TouchableOpacity
-                style={[styles.button]}
                 key={8}
             >
+              
                 <Text style={styles.textButton}>info</Text>
             </TouchableOpacity>
             </View>
@@ -23,11 +28,7 @@ const BaseModuleGame = ({ navigation }: any) => {
             <TouchableOpacity
                 style={[styles.button, styles.buttonFirst]}
                 key={1}
-                onPress={() => {
-                    navigation.navigate('Game', {
-                      levelId: 1,
-                    });
-                  }}
+                onPress={() => onLevel(1)}
             >
                 <Text style={styles.textButton}> </Text>
             </TouchableOpacity>

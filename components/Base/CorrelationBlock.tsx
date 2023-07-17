@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Alert, StyleSheet, Text, View } from 'react-native';
-import { dataQuestions } from '../../mocks/qestions';
+import { dataQuestions } from '../../mocks/level';
 import ICorrelationQuestion from '../../types/questionType';
 import BaseImageCard from './BaseImageCard';
 import BaseButton from './BaseButton';
