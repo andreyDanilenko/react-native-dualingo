@@ -1,4 +1,4 @@
-import  BaseImageCard from './Base/BaseImageCard'
+import  BaseImageCard from './Base/molecules/BaseImageCard/BaseImageCard'
 
 
 

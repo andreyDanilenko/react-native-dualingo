@@ -1,14 +1,13 @@
-import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { dataQuestions } from '../../mocks/level';
+import { Image, Text, TouchableOpacity, View } from 'react-native';
+import { dataQuestions } from '../../../../mocks/level';
 import { useState } from 'react';
-import CorrelationBlock from './CorrelationBlock';
-import ICorrelationQuestion from '../../types/questionType';
-import MatchBlock from './MatchBlock';
-import SentenceBlock from './SentenceBlock';
+import CorrelationBlock from '../CorrelationBlock/CorrelationBlock';
+import ICorrelationQuestion from '../../../../types/questionType';
+import MatchBlock from '../MatchBlock/MatchBlock';
+import SentenceBlock from '../SentenceBlock/SentenceBlock';
+import styles from './DistributingQuestionBlock.styles';
 const   across = require('../../assets/decoration/across.png')  
 const   health = require('../../assets/decoration/health.png')  
-
-
 
 
 interface IProps {
@@ -99,51 +98,5 @@ const DistributingQuestionBlock = ({levelId}:IProps): JSX.Element => {
         </View> 
     );
 };
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        paddingTop: 30,
-        backgroundColor: '#fff'
-    },
-
-    header: {
-        width: '100%',
-        padding: 15,
-        flexDirection: 'row',
-    },
-    nextButtonWrapper: {
-        width: '5%',
-    },
-    nextButton: {
-        // marginTop: -1,
-    },
-    progressBar: {
-        marginTop: 2,
-        marginLeft: '7%',
-        marginRight: '6%',
-        width: '70%',
-        height: 16,
-        borderRadius: 10,
-        backgroundColor: '#e5e5e5',
-    },
-    progressBarTotal: {
-        height: 16,
-        borderRadius: 10,
-        backgroundColor: '#58cc02',
-    },
-    healthContainer: {
-        flexDirection: 'row',
-        gap: 4
-    },
-    healthImage: {
-        marginTop: -5,
-    },
-    healthText: {
-        fontSize: 16,
-        color: '#fc4848',
-        fontWeight: '600'
-    }
-});
 
 export default DistributingQuestionBlock;

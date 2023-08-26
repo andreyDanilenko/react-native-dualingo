@@ -1,6 +1,6 @@
 
 import {  StyleSheet, Text, View, TouchableOpacity, ScrollView } from 'react-native';
-import BaseModuleGame from '../../components/Base/BaseModuleGame';
+import BaseModuleGame from '../../components/Base/organisms/BaseModuleGame/BaseModuleGame';
 
 const HomeScreen = ({ navigation }: any) => {
     

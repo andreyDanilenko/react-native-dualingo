@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { Alert, StyleSheet, Text, View } from 'react-native';
-import { dataQuestions } from '../../mocks/level';
-import ICorrelationQuestion from '../../types/questionType';
-import BaseImageCard from './BaseImageCard';
-import BaseButton from './BaseButton';
+import { Text, View } from 'react-native';
+import ICorrelationQuestion from '../../../../types/questionType';
+import BaseImageCard from '../../molecules/BaseImageCard/BaseImageCard';
+import BaseButton from '../../atoms/BaseButton/BaseButton';
+import styles from './CorrelationBlock.styles';
 
 interface IProps {
     question: string
@@ -55,41 +55,5 @@ const CorrelationBlock = ({question, options, onGiveAnswer}: IProps) => {
         </View>
     );
 };
-
-const styles = StyleSheet.create({
-    homeScreen: {
-        backgroundColor: '#ffffff',
-        height: '100%',
-        flex: 1,
-    },
-
-    titleContainer: {
-        // backgroundColor: '#58CC02',
-    },
-
-    title: {
-        fontSize: 22,
-        textAlign: 'center',
-        fontWeight: 600,
-        padding: 15,
-        paddingTop: 5,
-    },
-
-    imageList: {
-        padding: 20,
-        paddingTop: 5,
-        width: '100%',
-        flex: 1,
-        flexDirection: 'row',
-        flexWrap: 'wrap',
-        justifyContent: 'space-between',
-        alignContent: 'space-between'
-    },
-
-    buttons: {
-        paddingTop: 0,
-        padding: 20,
-    },
-});
 
 export default CorrelationBlock;

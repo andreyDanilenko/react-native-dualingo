@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import LoadingScreen from '../LoadingScreen/LoadingScreen';
-import DistributingQuestionBlock from '../../components/Base/DistributingQuestionBlock';
+import DistributingQuestionBlock from '../../components/Base/organisms/DistributingQuestionBlock/DistributingQuestionBlock';
 
 interface IProps {
     route: {
