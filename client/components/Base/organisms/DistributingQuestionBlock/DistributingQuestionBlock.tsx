@@ -6,8 +6,10 @@ import ICorrelationQuestion from '../../../../types/questionType';
 import MatchBlock from '../MatchBlock/MatchBlock';
 import SentenceBlock from '../SentenceBlock/SentenceBlock';
 import styles from './DistributingQuestionBlock.styles';
-const   across = require('../../assets/decoration/across.png')  
-const   health = require('../../assets/decoration/health.png')  
+import { useNavigation } from '@react-navigation/native';
+
+const   across = require('../../../../assets/decoration/across.png')  
+const   health = require('../../../../assets/decoration/health.png')  
 
 
 interface IProps {
@@ -15,6 +17,8 @@ interface IProps {
 }
 
 const DistributingQuestionBlock = ({levelId}:IProps): JSX.Element => {
+    const navigation = useNavigation(); // Получаем объект навигации
+
     console.log('123', levelId);
     
     const [countQuestionIndex, setCountQuestionIndex] = useState(0)
@@ -76,7 +80,7 @@ const DistributingQuestionBlock = ({levelId}:IProps): JSX.Element => {
                 <View style={styles.nextButtonWrapper}>
                     <TouchableOpacity 
                         style={styles.nextButton}
-                        onPress={()=> onBack()}
+                        onPress={()=> navigation.goBack()}
                         >
                       <Image
                         resizeMode="contain"

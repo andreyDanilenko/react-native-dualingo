@@ -4,3 +4,8 @@ export default interface ICorrelationQuestion {
     text: string,
     correct?: boolean,
 }
+
+export default interface IMatchQuestion {
+    id: string
+    text: string,
+}

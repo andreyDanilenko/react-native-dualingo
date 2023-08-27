@@ -1,27 +1,23 @@
 import { Text, View } from 'react-native';
-import ICorrelationQuestion from '../../../../types/questionType';
+import IMatchQuestion from '../../../../types/questionType';
 import { useState } from 'react';
 import BaseButton from '../../atoms/BaseButton/BaseButton';
 import styles from './MatchBlock.styles';
+import BaseWordCard from '../../molecules/BaseWordBlock/BaseWordBlock';
 
 interface IProps {
   question: string
-  options: string | object
+  options: {
+    currentLanguage: IMatchQuestion[],
+    anotherLanguage: IMatchQuestion[]
+  },
   onGiveAnswer: any
 }
 
 const MatchBlock = ({question, options, onGiveAnswer}: IProps) => {
-    const [selected, setSelected] = useState<ICorrelationQuestion | null>(null)
+    const [selected, setSelected] = useState<IMatchQuestion | null>(null)
         
     const onSelectedOption = () => {
-        // if (selected?.correct) {
-        //    Alert.alert('Correct')
-        // } else {
-        //    Alert.alert('Wrong')
-        // }
-        // setCountQuestionIndex(count)
-        // onPress(selected)
-
         setSelected(null)
         onGiveAnswer(selected)
     }
@@ -31,8 +27,29 @@ const MatchBlock = ({question, options, onGiveAnswer}: IProps) => {
             <View style={styles.titleContainer}>
                 <Text style={styles.title}>{question}</Text>
             </View>
-            <View style={styles.imageList} >
-               <Text>match</Text>  
+            <View style={styles.lists} >
+                <View style={styles.list} >
+                    {
+                        options.currentLanguage.map((data) => {
+                            return <BaseWordCard
+                                text={data.text} 
+                                key={data.text}
+                                isSelected={selected?.id === data.id}
+                                onPress={() => setSelected(data)} />
+                        })
+                    }
+                </View>
+                <View style={styles.list} >
+                    {
+                        options.anotherLanguage.map((data) => {
+                            return <BaseWordCard
+                                text={data.text} 
+                                key={data.text}
+                                isSelected={selected?.id === data.id}
+                                onPress={() => setSelected(data)} />
+                        })
+                    }
+                </View>
             </View>
             <View style={styles.buttons} >
                 <BaseButton
